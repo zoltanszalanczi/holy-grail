@@ -24,10 +24,10 @@
     "header header header"
     "menu content sidebar"
     "footer footer footer";
-  grid-template-columns: 15% auto 15%;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: 10vh 1fr 10vh;
   height: 100vh;
-  grid-gap: 0.4rem;
+  grid-gap: 10px;
 }
 
 @media (max-width: 360px) {
@@ -43,18 +43,15 @@
 	}
 }
 
-.item {
-	padding: 0.625rem;
+.item{
+  text-align: center;
 }
 
 .header, .footer{
   font-size: 2rem;
-  place-self: center center;
+  padding-top: calc((10vh - 2rem)/2);
 }
 
-.menu, .content, .sidebar{
-  place-self: start center;
-}
 
 .header{
   background-color: greenyellow;
